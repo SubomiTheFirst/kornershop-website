@@ -88,46 +88,73 @@
     <!-- HERO -->
     <section class="hero section section--dark">
       <div class="container hero__inner">
+
         <div class="hero__content">
           <p class="label">Lagos · Print · Brand</p>
-          <h1 class="display hero__headline">Print Like You Mean It.</h1>
-          <p class="hero__sub">Precision print and branding for businesses that refuse to look ordinary.</p>
+          <h1 class="display hero__headline">Print Like<br>You Mean It.</h1>
+          <p class="hero__sub">
+            Precision print and branding for businesses
+            that refuse to look ordinary.
+          </p>
           <div class="hero__ctas">
-            <a href="https://wa.me/[YOUR_NUMBER]?text=Hi%20KornerShop%2C%20I%27d%20like%20to%20discuss%20a%20print%20order."
-               class="btn btn--primary"
-               target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/[NUMBER]?text=Hi%20KornerShop%2C%20I%27d%20like%20to%20discuss%20a%20print%20order."
+              class="btn btn--primary btn--lg"
+              target="_blank" rel="noopener noreferrer">
               Get a Quote
             </a>
-            <a href="/work.html" class="btn btn--outline">
+            <a href="/work.html" class="btn btn--outline btn--lg">
               See Our Work
             </a>
           </div>
-          <p class="hero__trust">48–72hr standard turnaround · Quality checked before delivery · Lagos-wide delivery</p>
+          <p class="hero__trust">
+            48–72hr standard turnaround
+            <span class="hero__trust-sep">·</span>
+            Quality checked before delivery
+            <span class="hero__trust-sep">·</span>
+            Lagos-wide delivery
+          </p>
         </div>
-        <div class="hero__visual">
-          <!-- Hero image or geometric composition goes here -->
+
+        <div class="hero__visual" aria-hidden="true">
+          <!-- Option A: Best portfolio photo -->
+          <!-- <img src="/assets/images/portfolio/hero-feature.webp"
+                  alt="" loading="eager" width="600" height="700"> -->
+
+          <!-- Option B: Geometric bracket composition (CSS only, no image needed) -->
+          <div class="hero__brackets">
+            <div class="bracket bracket--tl"></div>
+            <div class="bracket bracket--br"></div>
+          </div>
         </div>
+
       </div>
     </section>
 
     <!-- PILLARS -->
     <section class="pillars section section--light">
       <div class="container pillars__grid">
-        <div class="pillar">
+
+        <div class="pillar reveal">
+          <div class="pillar__accent"></div>
           <span class="pillar__num">01</span>
           <h3 class="pillar__name">Precision First</h3>
           <p class="pillar__text">Every millimeter matters. Color accuracy, finish selection, and material weight are treated as brand decisions, not afterthoughts.</p>
         </div>
-        <div class="pillar">
+
+        <div class="pillar reveal">
+          <div class="pillar__accent"></div>
           <span class="pillar__num">02</span>
           <h3 class="pillar__name">Fast Turnaround</h3>
           <p class="pillar__text">Standard delivery in 48–72 hours. Rush options available. Deadlines are commitments, not suggestions.</p>
         </div>
-        <div class="pillar">
+
+        <div class="pillar reveal">
+          <div class="pillar__accent"></div>
           <span class="pillar__num">03</span>
           <h3 class="pillar__name">Full Range</h3>
           <p class="pillar__text">From business cards to branded packaging — one vendor for every print touchpoint your brand requires.</p>
         </div>
+
       </div>
     </section>
 
@@ -136,7 +163,58 @@
       <div class="container">
         <p class="label">What We Produce</p>
         <div class="services__grid">
-          <!-- Service cards — built in components.css -->
+
+          <a href="/services.html#corporate" class="service-card reveal">
+            <h3 class="service-card__name">Corporate Identity Print</h3>
+            <p class="service-card__text">Cards, letterheads, ID cards, branded stationery</p>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="/services.html#marketing" class="service-card reveal">
+            <h3 class="service-card__name">Marketing Materials</h3>
+            <p class="service-card__text">Flyers, brochures, annual reports, catalogues</p>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="/services.html#signage" class="service-card reveal">
+            <h3 class="service-card__name">Signage & Display</h3>
+            <p class="service-card__text">Roll-up banners, flex signage, event backdrops</p>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="/services.html#clothing" class="service-card reveal">
+            <h3 class="service-card__name">Branded Clothing</h3>
+            <p class="service-card__text">D2G print, screen printing, embroidery</p>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="/services.html#packaging" class="service-card reveal">
+            <h3 class="service-card__name">Custom Packaging</h3>
+            <p class="service-card__text">Gift boxes, paper bags, cloth tags, labels</p>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="/services.html#specialty" class="service-card reveal">
+            <h3 class="service-card__name">Specialty Print</h3>
+            <p class="service-card__text">Die-cut cards, borderless production, large format</p>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="/services.html#design" class="service-card reveal">
+            <h3 class="service-card__name">Brand & Design</h3>
+            <p class="service-card__text">Logo design, brand identity, marketing collateral</p>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="/services.html#souvenirs" class="service-card reveal">
+            <h3 class="service-card__name">Souvenirs & Merchandise</h3>
+            <p class="service-card__text">Custom branded items for events and corporate gifting</p>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+        <div class="services__cta">
+          <a href="/services.html" class="services__link">See full catalog →</a>
         </div>
       </div>
     </section>
@@ -146,9 +224,50 @@
       <div class="container">
         <p class="label">Selected Work</p>
         <div class="showcase__grid">
-          <!-- Portfolio images go here -->
+
+          <!-- Replace src with your actual portfolio images -->
+          <!-- Optimized to WebP at 800px wide via Squoosh.app -->
+
+          <div class="showcase__item reveal">
+            <img src="/assets/images/portfolio/work-01.webp"
+                alt="Corporate identity print — business cards and letterhead"
+                loading="lazy" width="400" height="500">
+          </div>
+
+          <div class="showcase__item reveal">
+            <img src="/assets/images/portfolio/work-02.webp"
+                alt="Custom branded packaging — gift boxes"
+                loading="lazy" width="600" height="400">
+          </div>
+
+          <div class="showcase__item reveal">
+            <img src="/assets/images/portfolio/work-03.webp"
+                alt="Roll-up banners for event display"
+                loading="lazy" width="400" height="500">
+          </div>
+
+          <div class="showcase__item reveal">
+            <img src="/assets/images/portfolio/work-04.webp"
+                alt="Branded clothing — D2G print polo"
+                loading="lazy" width="600" height="400">
+          </div>
+
+          <div class="showcase__item reveal">
+            <img src="/assets/images/portfolio/work-05.webp"
+                alt="Branded paper bags and packaging"
+                loading="lazy" width="400" height="500">
+          </div>
+
+          <div class="showcase__item reveal">
+            <img src="/assets/images/portfolio/work-06.webp"
+                alt="Flyers and marketing materials"
+                loading="lazy" width="600" height="400">
+          </div>
+
         </div>
-        <a href="/work.html" class="btn btn--outline-dark">View All Work</a>
+        <div style="display:flex; justify-content:center; margin-top: var(--space-2xl);">
+          <a href="/work.html" class="btn btn--outline-dark btn--lg">View All Work</a>
+        </div>
       </div>
     </section>
 
@@ -157,26 +276,34 @@
       <div class="container">
         <p class="label">How It Works</p>
         <div class="process__steps">
-          <div class="process__step">
+
+          <div class="process__step reveal">
             <span class="process__num">01</span>
-            <h3>Brief Us</h3>
-            <p>Tell us what you need via WhatsApp or our order form.</p>
+            <div class="process__connector" aria-hidden="true"></div>
+            <h3 class="process__name">Brief Us</h3>
+            <p class="process__text">Tell us what you need via WhatsApp or our order form. The more detail the better.</p>
           </div>
-          <div class="process__step">
+
+          <div class="process__step reveal">
             <span class="process__num">02</span>
-            <h3>We Quote</h3>
-            <p>Detailed quote within 2 hours. No hidden charges.</p>
+            <div class="process__connector" aria-hidden="true"></div>
+            <h3 class="process__name">We Quote</h3>
+            <p class="process__text">Detailed quote within 2 hours during business hours. No hidden charges, no surprises.</p>
           </div>
-          <div class="process__step">
+
+          <div class="process__step reveal">
             <span class="process__num">03</span>
-            <h3>Approve & Pay</h3>
-            <p>Confirm the order, pay 50% deposit, production begins.</p>
+            <div class="process__connector" aria-hidden="true"></div>
+            <h3 class="process__name">Approve & Pay</h3>
+            <p class="process__text">Confirm the order, pay 50% deposit, approve your artwork. Production begins immediately.</p>
           </div>
-          <div class="process__step">
+
+          <div class="process__step reveal">
             <span class="process__num">04</span>
-            <h3>Receive</h3>
-            <p>Quality checked before delivery. Balance on receipt.</p>
+            <h3 class="process__name">Receive</h3>
+            <p class="process__text">Quality checked before delivery. Balance payment on completion. Done.</p>
           </div>
+
         </div>
       </div>
     </section>
@@ -185,18 +312,26 @@
     <section class="proof section section--dark">
       <div class="container">
         <div class="proof__stats">
-          <div class="proof__stat">
+
+          <div class="proof__stat reveal">
             <span class="proof__num">48hrs</span>
             <span class="proof__label">Standard Turnaround</span>
           </div>
-          <div class="proof__stat">
+
+          <div class="proof__divider" aria-hidden="true"></div>
+
+          <div class="proof__stat reveal">
             <span class="proof__num">100%</span>
             <span class="proof__label">Quality Checked</span>
           </div>
-          <div class="proof__stat">
+
+          <div class="proof__divider" aria-hidden="true"></div>
+
+          <div class="proof__stat reveal">
             <span class="proof__num">Lagos</span>
             <span class="proof__label">Based & Delivered</span>
           </div>
+
         </div>
       </div>
     </section>
@@ -206,15 +341,13 @@
       <div class="container cta-block__inner">
         <h2 class="cta-block__headline">Ready to Print Like You Mean It?</h2>
         <p class="cta-block__sub">Tell us what you need. We'll handle everything from design to delivery.</p>
-        <a href="https://wa.me/+2348169223401?text=Hi%20KornerShop%2C%20I%27d%20like%20to%20discuss%20a%20print%20order."
-           class="btn btn--dark"
-           target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/[NUMBER]?text=Hi%20KornerShop%2C%20I%27d%20like%20to%20discuss%20a%20print%20order."
+          class="btn btn--dark btn--lg"
+          target="_blank" rel="noopener noreferrer">
           Start Your Order
         </a>
       </div>
     </section>
-
-  </main>
 
   <!-- FOOTER -->
   <footer class="footer section--dark">
@@ -229,10 +362,10 @@
         <a href="/work.html">Work</a>
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact</a>
-        <a href="https://wa.me/[YOUR_NUMBER]" target="_blank" rel="noopener noreferrer">Get a Quote</a>
+        <a href="https://wa.me/+2348164569629" target="_blank" rel="noopener noreferrer">Get a Quote</a>
       </div>
       <div class="footer__contact">
-        <a href="https://wa.me/[YOUR_NUMBER]" target="_blank" rel="noopener noreferrer">[Your WhatsApp Number]</a>
+        <a href="https://wa.me/+2348164569629" target="_blank" rel="noopener noreferrer">+234 816 456 9629</a>
         <a href="mailto:kornershopng@gmail.com">kornershopng@gmail.com</a>
         <a href="https://instagram.com/kornershopng" target="_blank" rel="noopener noreferrer">@kornershopng</a>
       </div>
