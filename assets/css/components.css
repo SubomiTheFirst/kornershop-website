@@ -337,6 +337,38 @@
   color: var(--color-orange);
 }
 
+/* ── PAGE HERO ───────────────────────────────────── */
+
+.page-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--space-3xl) + 80px);
+  padding-bottom: var(--space-3xl);
+}
+
+.page-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 800px;
+}
+
+.page-hero__headline {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.05;
+}
+
+.page-hero__sub {
+  font-size: var(--text-lg);
+  color: var(--color-gray-200);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
 /* Geometric bracket composition (Option B) */
 .hero__visual {
   position: relative;
