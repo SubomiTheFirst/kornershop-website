@@ -3,59 +3,247 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta -->
   <title>KornerShop — Print Like You Mean It.</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    .mark {
-      width: 80px;
-      height: 80px;
-      border-top: 6px solid #FF5114;
-      border-left: 6px solid #FF5114;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-    .orange { color: #FF5114; }
-    p {
-      font-size: 1.125rem;
-      color: #888;
-      max-width: 480px;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-    a {
-      display: inline-block;
-      background: #FF5114;
-      color: #fff;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-    }
-  </style>
+  <meta name="description" content="Precision print and branding for businesses that refuse to look ordinary. Business cards, packaging, signage, branded clothing and more. Based in Lagos, Nigeria.">
+  <meta name="author" content="KornerShop Branding & Print Co.">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://kornershopng.com/">
+  <meta property="og:title"       content="KornerShop — Print Like You Mean It.">
+  <meta property="og:description" content="Precision print and branding for businesses that refuse to look ordinary.">
+  <meta property="og:image"       content="/assets/images/ui/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="KornerShop — Print Like You Mean It.">
+  <meta name="twitter:description" content="Precision print and branding for businesses that refuse to look ordinary.">
+  <meta name="twitter:image"       content="/assets/images/ui/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo/favicon.svg">
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS — order matters -->
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
 </head>
+
 <body>
-  <div class="mark"></div>
-  <h1>Print Like You <span class="orange">Mean It.</span></h1>
-  <p>KornerShop — precision print and branding for businesses that refuse to look ordinary. Full site launching soon.</p>
-  <a href="https://wa.me/+2348169223401?text=Hi%20KornerShop%2C%20I%27d%20like%20to%20discuss%20a%20print%20order."
-     target="_blank">Order on WhatsApp →</a>
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo" aria-label="KornerShop Home">
+        <!-- Logo SVG inline or img tag goes here -->
+        <span class="nav__wordmark">KornerShop</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="/services.html">Services</a>
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <a href="https://wa.me/[YOUR_NUMBER]?text=Hi%20KornerShop%2C%20I%27d%20like%20to%20discuss%20a%20print%20order."
+         class="btn btn--primary nav__cta"
+         target="_blank"
+         rel="noopener noreferrer">
+        Get a Quote
+      </a>
+
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="/services.html">Services</a>
+      <a href="/work.html">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://wa.me/[YOUR_NUMBER]?text=Hi%20KornerShop%2C%20I%27d%20like%20to%20discuss%20a%20print%20order."
+         target="_blank" rel="noopener noreferrer">
+        Get a Quote
+      </a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero section section--dark">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="label">Lagos · Print · Brand</p>
+          <h1 class="display hero__headline">Print Like You Mean It.</h1>
+          <p class="hero__sub">Precision print and branding for businesses that refuse to look ordinary.</p>
+          <div class="hero__ctas">
+            <a href="https://wa.me/[YOUR_NUMBER]?text=Hi%20KornerShop%2C%20I%27d%20like%20to%20discuss%20a%20print%20order."
+               class="btn btn--primary"
+               target="_blank" rel="noopener noreferrer">
+              Get a Quote
+            </a>
+            <a href="/work.html" class="btn btn--outline">
+              See Our Work
+            </a>
+          </div>
+          <p class="hero__trust">48–72hr standard turnaround · Quality checked before delivery · Lagos-wide delivery</p>
+        </div>
+        <div class="hero__visual">
+          <!-- Hero image or geometric composition goes here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="pillars section section--light">
+      <div class="container pillars__grid">
+        <div class="pillar">
+          <span class="pillar__num">01</span>
+          <h3 class="pillar__name">Precision First</h3>
+          <p class="pillar__text">Every millimeter matters. Color accuracy, finish selection, and material weight are treated as brand decisions, not afterthoughts.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar__num">02</span>
+          <h3 class="pillar__name">Fast Turnaround</h3>
+          <p class="pillar__text">Standard delivery in 48–72 hours. Rush options available. Deadlines are commitments, not suggestions.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar__num">03</span>
+          <h3 class="pillar__name">Full Range</h3>
+          <p class="pillar__text">From business cards to branded packaging — one vendor for every print touchpoint your brand requires.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section section--dark">
+      <div class="container">
+        <p class="label">What We Produce</p>
+        <div class="services__grid">
+          <!-- Service cards — built in components.css -->
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK SHOWCASE -->
+    <section class="showcase section section--light">
+      <div class="container">
+        <p class="label">Selected Work</p>
+        <div class="showcase__grid">
+          <!-- Portfolio images go here -->
+        </div>
+        <a href="/work.html" class="btn btn--outline-dark">View All Work</a>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process section section--gray">
+      <div class="container">
+        <p class="label">How It Works</p>
+        <div class="process__steps">
+          <div class="process__step">
+            <span class="process__num">01</span>
+            <h3>Brief Us</h3>
+            <p>Tell us what you need via WhatsApp or our order form.</p>
+          </div>
+          <div class="process__step">
+            <span class="process__num">02</span>
+            <h3>We Quote</h3>
+            <p>Detailed quote within 2 hours. No hidden charges.</p>
+          </div>
+          <div class="process__step">
+            <span class="process__num">03</span>
+            <h3>Approve & Pay</h3>
+            <p>Confirm the order, pay 50% deposit, production begins.</p>
+          </div>
+          <div class="process__step">
+            <span class="process__num">04</span>
+            <h3>Receive</h3>
+            <p>Quality checked before delivery. Balance on receipt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="proof section section--dark">
+      <div class="container">
+        <div class="proof__stats">
+          <div class="proof__stat">
+            <span class="proof__num">48hrs</span>
+            <span class="proof__label">Standard Turnaround</span>
+          </div>
+          <div class="proof__stat">
+            <span class="proof__num">100%</span>
+            <span class="proof__label">Quality Checked</span>
+          </div>
+          <div class="proof__stat">
+            <span class="proof__num">Lagos</span>
+            <span class="proof__label">Based & Delivered</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BLOCK -->
+    <section class="cta-block section bg-orange">
+      <div class="container cta-block__inner">
+        <h2 class="cta-block__headline">Ready to Print Like You Mean It?</h2>
+        <p class="cta-block__sub">Tell us what you need. We'll handle everything from design to delivery.</p>
+        <a href="https://wa.me/+2348169223401?text=Hi%20KornerShop%2C%20I%27d%20like%20to%20discuss%20a%20print%20order."
+           class="btn btn--dark"
+           target="_blank" rel="noopener noreferrer">
+          Start Your Order
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer section--dark">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__wordmark">KornerShop</span>
+        <p class="footer__tagline">Print Like You Mean It.</p>
+        <p class="footer__copy">&copy; 2025 KornerShop Branding & Print Co.</p>
+      </div>
+      <div class="footer__nav">
+        <a href="/services.html">Services</a>
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://wa.me/[YOUR_NUMBER]" target="_blank" rel="noopener noreferrer">Get a Quote</a>
+      </div>
+      <div class="footer__contact">
+        <a href="https://wa.me/[YOUR_NUMBER]" target="_blank" rel="noopener noreferrer">[Your WhatsApp Number]</a>
+        <a href="mailto:kornershopng@gmail.com">kornershopng@gmail.com</a>
+        <a href="https://instagram.com/kornershopng" target="_blank" rel="noopener noreferrer">@kornershopng</a>
+      </div>
+    </div>
+    <div class="footer__bar"></div>
+    <p class="footer__legal container">KornerShop Branding & Print Co. · Lagos, Nigeria · kornershopng.com</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/animations.js" defer></script>
+
 </body>
 </html>

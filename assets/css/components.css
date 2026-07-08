@@ -1,0 +1,375 @@
+/* ── BUTTONS ─────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 0;           /* Flat corners — architectural, brand-consistent */
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Primary — Orange fill, white text */
+.btn--primary {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-color: var(--color-orange);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-orange-dark);
+  border-color: var(--color-orange-dark);
+}
+
+/* Outline — White border, transparent bg (for dark backgrounds) */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Outline Dark — Black border, transparent bg (for light backgrounds) */
+.btn--outline-dark {
+  background-color: transparent;
+  color: var(--color-black);
+  border-color: var(--color-black);
+}
+
+.btn--outline-dark:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Dark — Black fill, white text (for orange section CTAs) */
+.btn--dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+
+.btn--dark:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Size modifier */
+.btn--lg {
+  padding: 1.125rem 2.25rem;
+  font-size: var(--text-base);
+}
+
+.btn--sm {
+  padding: 0.625rem 1.25rem;
+  font-size: var(--text-xs);
+}
+
+/* ── NAVIGATION ──────────────────────────────────── */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  padding-block: 1.25rem;
+  transition: background-color var(--transition-base),
+              padding var(--transition-base);
+}
+
+/* Transparent at page top */
+.nav--top {
+  background-color: transparent;
+}
+
+/* Solid black after scroll */
+.nav--scrolled {
+  background-color: var(--color-black);
+  padding-block: 0.875rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav__wordmark {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+}
+
+/* Replace with actual SVG logo once exported */
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  list-style: none;
+}
+
+.nav__links a {
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-gray-200);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-orange);
+  transition: width var(--transition-base);
+}
+
+.nav__links a:hover {
+  color: var(--color-white);
+}
+
+.nav__links a:hover::after {
+  width: 100%;
+}
+
+/* Active page indicator */
+.nav__links a.active {
+  color: var(--color-white);
+}
+
+.nav__links a.active::after {
+  width: 100%;
+}
+
+/* Hamburger */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+  border-radius: 1px;
+  transition: transform var(--transition-base),
+              opacity var(--transition-fast);
+  transform-origin: center;
+}
+
+/* Hamburger → X animation */
+.nav__hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav__hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav__hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav overlay */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-nav) - 1);
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-slow);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  text-align: center;
+}
+
+.mobile-menu nav a {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.mobile-menu nav a:hover {
+  color: var(--color-orange);
+}
+
+.mobile-menu nav a:last-child {
+  margin-top: var(--space-lg);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  padding: 0.875rem 1.75rem;
+  font-weight: 600;
+}
+
+/* Responsive — hide links, show hamburger */
+@media (max-width: 768px) {
+  .nav__links,
+  .nav__cta {
+    display: none;
+  }
+
+  .nav__hamburger {
+    display: flex;
+  }
+}
+
+/* ── FOOTER ──────────────────────────────────────── */
+
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-xl);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.footer__wordmark {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.footer__tagline {
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  color: var(--color-orange);
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.footer__copy {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer__nav a {
+  font-size: var(--text-sm);
+  color: var(--color-gray-200);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer__nav a:hover {
+  color: var(--color-orange);
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer__contact a {
+  font-size: var(--text-sm);
+  color: var(--color-gray-200);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer__contact a:hover {
+  color: var(--color-orange);
+}
+
+/* Orange rule */
+.footer__bar {
+  height: 1px;
+  background-color: var(--color-orange);
+  margin-bottom: var(--space-md);
+}
+
+.footer__legal {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
